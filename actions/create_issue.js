@@ -3,7 +3,13 @@ const trello_api_key = process.env.TRELLO_API_KEY;
 const trello_api_token = process.env.TRELLO_API_TOKEN;
 const action_no = process.env.GITHUB_RUN_NUMBER;
 
-var $ = require( "jquery" );
+var jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+const { document } = (new JSDOM('')).window;
+global.document = document;
+
+var $ = jQuery = require('jquery')(window);
 
 function newIssue(cardName,Description){
     $.post("https://api.trello.com/1/cards",
