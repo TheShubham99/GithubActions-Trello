@@ -18,7 +18,9 @@ function newIssue(cardName,Description){
 	  key: trello_api_key,
 	  token: trello_api_token,
       name: cardName,
-      desc: Description
+      desc: Description,
+      idCardSource: '5e9c38fe2f546a0d524492bd',
+      keepFromSource: 'attachments'
     },
     function(data,status){
       console.log("Status: " + status);
