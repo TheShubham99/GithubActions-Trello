@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: add dependencies
-        run: npm install jquery
+        run: npm install jquery@3.0.0
       - name: Add Issue
         uses: ./actions
       
