@@ -12,8 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: add dependencies
-        run: npm install jquery
-        run: npm install jsdom
+        run: npm i jquery jsdom
       - name: Add Issue
         uses: ./actions
       
