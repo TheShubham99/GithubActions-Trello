@@ -25,7 +25,7 @@ function newIssue(cardName,Description){
     });
   }
 
-newIssue('Issue:'+action_no,'by:'+actor);
+newIssue('Issue No #:'+action_no,'by:'+actor);
 
 
 
