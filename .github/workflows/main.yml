@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: My first step
+      - name: add dependencies
+        run: npm install jquery
+      - name: Add Issue
         uses: ./actions
       
