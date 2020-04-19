@@ -1,0 +1,6 @@
+name: 'Create Issue in Trello List'
+description: 'This command creates issue in trello card'
+runs:
+  using: 'node12'
+  main: './create_issue.js'
+
