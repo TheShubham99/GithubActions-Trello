@@ -1,9 +1,18 @@
 //const trello_api_key = process.env.TRELLO_API_KEY;
 //const trello_api_token = process.env.TRELLO_API_TOKEN;
 
-function init(){
+function include(file) { 
+  
+    var script  = document.createElement('script'); 
+    script.src  = file; 
+    script.type = 'text/javascript'; 
+    script.defer = true; 
+    
+    document.getElementsByTagName('head').item(0).appendChild(script); 
+    
+  } 
 include('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'); 
-}
+
 
 const listId='5e9c0ee94f859847a991d53b';
 
@@ -38,7 +47,6 @@ function newCard(cardName,Description,ListID=listId){
   }
 
   function getCardId(ListID=listId, cardName){
-      init();
     $.getJSON('https://api.trello.com/1/lists/' + ListID + '/cards', function (trelloList) {
 
         $.each(trelloList, function (index, trelloCards) {
