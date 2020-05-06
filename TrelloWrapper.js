@@ -33,13 +33,13 @@ function newCard(cardName,Description,ListID=listId){
     });
   }
 
-  function getCardId(ListID=listId, cardName){
-
+  function getCardId(ListID, cardName){
+    console.log(cardName);
     $.getJSON('https://api.trello.com/1/lists/' + ListID + '/cards', function (trelloList) {
 
         $.each(trelloList, function (index, trelloCards) {
             const url = trelloCards.url + '.json?fields=name';
-            
+            console.log(url);
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
                 {
