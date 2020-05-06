@@ -34,7 +34,7 @@ function newCard(cardName,Description,ListID=listId){
   }
 
   function getCardId(ListID, cardName){
-    console.log(cardName);
+    
     $.getJSON('https://api.trello.com/1/lists/' + ListID + '/cards', function (trelloList) {
 
         $.each(trelloList, function (index, trelloCards) {
@@ -42,7 +42,7 @@ function newCard(cardName,Description,ListID=listId){
             console.log(url);
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
-                {
+                {   console.log(trelloCard.name);
                     return trelloCard.id;
                 }      
             });
