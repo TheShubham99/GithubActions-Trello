@@ -2,9 +2,8 @@
 //const trello_api_token = process.env.TRELLO_API_TOKEN;
 
 function init(){
-var jQueryScript = document.createElement('script');  
-jQueryScript.setAttribute('src','https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js');
-document.head.appendChild(jQueryScript);}
+include('https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'); 
+}
 
 const listId='5e9c0ee94f859847a991d53b';
 
