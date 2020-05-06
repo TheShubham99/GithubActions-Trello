@@ -1,5 +1,5 @@
-const trello_api_key = process.env.TRELLO_API_KEY;
-const trello_api_token = process.env.TRELLO_API_TOKEN;
+//const trello_api_key = process.env.TRELLO_API_KEY;
+//const trello_api_token = process.env.TRELLO_API_TOKEN;
 const listId='5e9c0ee94f859847a991d53b';
 
 function newCard(cardName,Description,ListID=listId){
