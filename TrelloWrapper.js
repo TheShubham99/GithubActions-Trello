@@ -42,7 +42,7 @@ function newCard(cardName,Description,ListID=listId){
             console.log(url);
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
-                { trelloCardId=trelloCard.id;  
+                { trelloCardId=trelloCard.id.toString();  
                   return trelloCardId;
                 }      
             });
