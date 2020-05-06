@@ -1,5 +1,8 @@
 //const trello_api_key = process.env.TRELLO_API_KEY;
 //const trello_api_token = process.env.TRELLO_API_TOKEN;
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 const listId='5e9c0ee94f859847a991d53b';
 
 function newCard(cardName,Description,ListID=listId){
