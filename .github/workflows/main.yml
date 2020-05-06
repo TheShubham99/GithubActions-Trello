@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: add dependencies
+      - name: add dependencies 
         run: npm i jquery jsdom
       - name: Add Issue
         uses: ./actions
