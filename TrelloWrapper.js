@@ -42,7 +42,7 @@ function newCard(cardName,Description,ListID=listId){
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
                 { trelloCardId=trelloCardID+trelloCard.id;  
-                  break;
+                  return false; 
                 }      
             });
         });
