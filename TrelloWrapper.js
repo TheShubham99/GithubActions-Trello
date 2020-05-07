@@ -34,7 +34,7 @@ function newCard(cardName,Description,ListID=listId){
   }
 
   function getCardId(ListID, cardName){
-    var trelloCardId ='-1'; 
+    var trelloCardId =''; 
     $.getJSON('https://api.trello.com/1/lists/' + ListID + '/cards', function (trelloList) {
 
         $.each(trelloList, function (index, trelloCards) {
@@ -42,12 +42,14 @@ function newCard(cardName,Description,ListID=listId){
             console.log(url);
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
-                { trelloCardId=trelloCard.id.toString();  
-                  return trelloCardId;
+                { trelloCardId=trelloCardID+trelloCard.id;  
+                  break;
                 }      
             });
         });
     });
+
+    return trelloCardId;
 }
 
 function test(){
