@@ -41,7 +41,7 @@ function newCard(cardName,Description,ListID=listId){
             const url = trelloCards.url + '.json?fields=name';
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
-                { trelloCardId=trelloCardID+trelloCard.id;  
+                { trelloCardId=trelloCard.id;  
                   return false; 
                 }      
             });
