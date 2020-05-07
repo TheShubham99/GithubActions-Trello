@@ -48,6 +48,7 @@ function newCard(cardName,Description,ListID=listId){
         });
     });
 
+    console.log("debug"+trelloCardId);
     return trelloCardId;
 }
 
