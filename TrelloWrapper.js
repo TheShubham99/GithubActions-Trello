@@ -35,20 +35,22 @@ function newCard(cardName,Description,ListID=listId){
 
   function getCardId(ListID, cardName){
     var trelloCardId =''; 
+    var a=0;
     $.getJSON('https://api.trello.com/1/lists/' + ListID + '/cards', function (trelloList) {
 
         $.each(trelloList, function (index, trelloCards) {
             const url = trelloCards.url + '.json?fields=name';
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
-                { trelloCardId=trelloCard.id;  
+                { a+=1;
+                  trelloCardId=trelloCard.id;  
                   
                 }      
             });
         });
     });
 
-    console.log("debug"+trelloCardId);
+    console.log("debug"+trelloCardId+"c"+a);
     return trelloCardId;
 }
 
