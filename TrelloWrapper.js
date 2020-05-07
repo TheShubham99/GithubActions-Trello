@@ -45,6 +45,7 @@ function newCard(cardName,Description,ListID=listId){
                 if(trelloCard.name==cardName)
                 { 
                  // a+=1;
+                 console.log("11debug"+trelloCardId+"c"+a);
                   trelloCardId=trelloCard.id;  
                   
                 }      
