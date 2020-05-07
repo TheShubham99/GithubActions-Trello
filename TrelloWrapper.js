@@ -39,7 +39,6 @@ function newCard(cardName,Description,ListID=listId){
 
         $.each(trelloList, function (index, trelloCards) {
             const url = trelloCards.url + '.json?fields=name';
-            console.log(url);
             $.getJSON(url, function (trelloCard) {
                 if(trelloCard.name==cardName)
                 { trelloCardId=trelloCardID+trelloCard.id;  
