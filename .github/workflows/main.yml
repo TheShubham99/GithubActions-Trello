@@ -15,4 +15,5 @@ jobs:
         run: npm i jquery jsdom
       - name: Add Issue
         uses: ./actions
-      
+      - name: yourock-appreciator
+        uses: TheShubham99/YouRock@1,0.0  
